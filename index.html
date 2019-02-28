@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <ul class="circle-list">
+        <li>
+            <a href="#header" class="circle-item"></a>
+        </li>
+        <li>
+            <a href="#features-block" class="circle-item"></a>
+        </li>
+        <li>
+            <a href="#bottom-main" class="circle-item"></a>
+        </li>
+    </ul>
+    <header class="header" id="header">
+        <div class="wrap-header container">
+            <p class="logo-header">
+                <img src="image/logo-white.svg" alt="Джино" height="16px" class="logo-header-image"> <span>Домены</span>
+            </p>
+            <p class="till-date">Только до 31 января</p>
+            <h1 class="major-title">Честная цена<br>за домен.RU &mdash; 39 <i class="fas fa-ruble-sign"></i></h1>
+            <div class="input-domen-check">
+
+                <div class="input-domen-check-field">
+
+                    <input type="text" value="example.ru" class="enter-domen-input" patern="[a-z]">
+                    <input type="submit" value="Проверить" class="check-domen-button">
+
+                </div>
+                <div class="domen-free-or-busy hide">
+                    <p class="domen-free-or-busy-text">
+                        Домен
+                        <span id="domen-name">example.ru</span>
+                        - <span class="domen-status">свободен</span>.
+                        <a href="#" class="link-register"> Зарегистрировать за 39 Р</a>
+                    </p>
+                </div>
+            </div>
+
+            <button class="create-account-button" type="button">Создать аккаунт</button>
+        </div>
+
+    </header>
+    <main>
+        <div class="features-block" id="features-block">
+            <div class="features-block-wrap container">
+
+                <p class="logo-features-block">
+                    <img src="image/logo-red.svg" alt="Джино" height="16px" class="logo-features-block-image">
+                    <span>Домены</span>
+                </p>
+
+                <h2 class="title-features-block">Зарегистрировав у нас домен, вы получите</h2>
+
+                <div class="features-card-item top">
+                    <img src="image/businesscard.svg" alt="">
+                    <p>Сайт-визитка</p>
+                </div>
+                <div class="block-explanation">
+                    <p>
+                        Теперь вы всегда можете поддерживать актуальную информацию в реестре доменных имен и не пропустите важных уведомлений, даже если у вас изменился телефон или адрес электронной почты. Мы сделали процедуру редактирования данных
+                        простой и удобной. Пара кликов — и вся необходимая информация под контролем.
+                    </p>
+                </div>
+                <div class="features-card-item top">
+                    <img src="image/dns.svg" alt="">
+                    <p>Поддержка DNS</p>
+                </div>
+                <div class="block-explanation">
+                    <p>Зарегистрировав домен через «Джино», вы бесплатно получаете постоянную возможность изменения NS-записей и направления домена туда, куда вам хочется.</p>
+
+                    <p>У вас несколько доменов? Мы предоставляем бесплатную поддержку DNS для всех доменов, зарегистрированных и поддерживаемых «Джино».
+                    </p>
+                </div>
+                <div class="features-card-item top">
+                    <img src="image/certificate.svg" alt="">
+                    <p>Сертификат о владении доменом</p>
+                </div>
+                <div class="block-explanation">
+                    <p>Подтвердите владение доменным именем с помощью официального сертификата «Джино». Вам достаточно распечатать документ в формате PDF, который будет доступен в панели управления сразу же после делегирования домена.</p>
+                </div>
+
+                <div class="features-card-item top">
+                    <img src="image/autorenewal.svg" alt="">
+                    <p>Автодополнение</p>
+                </div>
+                <div class="block-explanation bottom">
+                    <p>С помощью функции «Автопродление» больше не нужно беспокоиться о том, что ваш домен внезапно перестанет работать. «Джино» заблаговременно продлит регистрацию на следующий период и вышлет вам уведомление об этом.</p>
+                </div>
+
+                <div class="features-card-item bottom">
+                    <img src="image/cloud.svg" alt="">
+                    <p>Облачное хранилище на 20Гб</p>
+                </div>
+                <div class="block-explanation">
+                    <p>Специально для своих клиентов «Джино» предлагает абсолютно бесплатный сервис — «Джино.Облако». Это надежное место для хранения файлов — здесь точно поместится всё. Вы получите постоянный доступ к своей музыке, фотографиям и документам и сможете без труда делиться данными с кем угодно.</p>
+                </div>
+
+                <div class="features-card-item bottom">
+                    <img src="image/freessl.svg" alt="">
+                    <p>Бесплатный SSL-сертификат</p>
+                </div>
+                <div class="block-explanation">
+                    <p>Будучи клиентом «Джино», вы можете бесплатно получить SSL-сертификат от удостоверяющего центра Let’s Encrypt. Данный сертификат позволит вашим сайтам работать по безопасному протоколу HTTPS и избежать предупреждений браузера о том, что на сайте используется незашифрованное соединение.</p>
+                    <p>Вы можете легко обзавестись сертификатом: в разделе «Домены» вашего аккаунта выберите нужный домен и на странице его настроек перейдите во вкладку «SSL». Сертификат выдаётся по нажатию одной кнопки и продлевается автоматически.</p>
+                </div>
+
+                <div class="features-card-item bottom">
+                    <img src="image/dnssec.svg" alt="">
+                    <p>DNSSEC в один клик</p>
+                </div>
+                <div class="block-explanation">
+                    <p>С помощью технологии цифрового подписывания ответа DNS-сервера вы можете застраховаться от возможной его подмены и быть уверенными в том, что посетители вашего сайта не попали на замаскированный сайт злоумышленников.</p>
+                    <p>Для подключения DNSSEC необходимо перейти в соответствующую вкладку в настройках вашего домена и нажать кнопку «Включить».</p>
+                </div>
+
+                <div class="features-card-item bottom">
+                    <img src="image/redirect.svg" alt="">
+                    <p>Перенаправление</p>
+                </div>
+                <div class="block-explanation">
+                    <p>Зарегистрировав домен на «Джино», вы сможете в любой момент просто и бесплатно перенаправить его на любую страницу любого сайта.</p>
+                    <p>У вас есть своя группа в социальной сети? Дайте ей персональный домен и она сможет стать полноценным сайтом, а не только страницей соцсети! Персонифицирование при помощи перенаправления доменного имени от «Джино» — это дополнительный инструмент в продвижении и идентификации вашей деятельности.
+                    </p>
+                </div>
+                <button class="create-account-button" type="button">Создать аккаунт</button>
+            </div>
+        </div>
+        <div class="bottom-main" id="bottom-main">
+            <div class="wrap-bottom-main container">
+                <p class="logo-bottom-main">
+                    <img src="image/logo-white.svg" alt="Джино" height="16px" class="logo-bottom-main-image">
+                    <span>Домены</span>
+                </p>
+                <h2 class="question-choose">Почему стоит выбрать &laquo;Джино&raquo;?</h2>
+                <p class="bottom-main-text">&laquo;Джино&raquo; более 18 лет на рынке, имеет 270 000 довольных клиентов, сообственную панель управления и многое другое.</p>
+                <button class="create-account-button" type="button">Создать аккаунт</button>
+                <div class="bottom-main-red-block">
+                    <p class="bottom-main-red-block-text">
+                        Вы получите <b>1000 баллов</b> в системе лояльности <span>Джино.Плюсы</span>, зарегистрировавшись в течение <b>24 часов</b> после посещения данной страницы
+                    </p>
+                    <p class="bottom-main-red-block-number">
+                        1000 +
+                    </p>
+                </div>
+                <p class="about-trademark">© &laquo;Джино&raquo;, 2003–2017. &laquo;Джино&raquo; является зарегистрированным товарным знаком. Лицензия на телематические услуги связи № 97495 от 09.03.2012. Правовая информация.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

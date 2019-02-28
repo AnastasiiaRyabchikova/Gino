@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+
+/* font-family: 'PT Sans', sans-serif; */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 100%;
+}
+
+.circle-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 125px;
+    width: 30px;
+
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.circle-item {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px #3a3a3a solid;
+    background-color: #fff;
+}
+
+.circle-item:hover,
+.circle-item-active {
+    border: 2px #fff solid;
+    background-color: #3a3a3a;
+}
+
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1092px;
+    min-width: 819px;
+    box-sizing: border-box;
+}
+
+.wrap-header {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px, 80px));
+    grid-gap: 7% 12px;
+    grid-template-areas:
+        "logoHeader logoHeader logoHeader tillDate tillDate tillDate tillDate tillDate tillDate . . ."
+        "majorTitle majorTitle majorTitle majorTitle majorTitle majorTitle majorTitle  majorTitle majorTitle majorTitle majorTitle majorTitle"
+        "inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck"
+        ". . . createAccountButton createAccountButton createAccountButton createAccountButton createAccountButton createAccountButton . . .";
+}
+
+.header {
+    background-image: url("image/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 3.2vh;
+}
+
+.logo-header,
+.logo-features-block,
+.logo-bottom-main {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: lowercase;
+    text-decoration: none;
+    display: flex;
+}
+
+.logo-header {
+    color: #fff;
+    grid-area: logoHeader;
+}
+
+.logo-header-image,
+.logo-features-block-image,
+.logo-bottom-main-image {
+    margin-right: 9px;
+}
+
+.till-date {
+    color: #fff;
+    grid-area: tillDate;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    justify-self: center;
+}
+
+.major-title {
+    grid-area: majorTitle;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-top: 6.5%;
+}
+
+.fa-ruble-sign {
+    font-size: 5rem;
+}
+
+.input-domen-check {
+    max-width: 600px;
+    width: 80vw;
+    grid-area: inputDomenCheck;
+    position: relative;
+    z-index: 100;
+    justify-self: center;
+    margin-bottom: 5%;
+
+}
+
+.input-domen-check-field {
+    box-sizing: border-box;
+    padding: 18px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.domen-free-or-busy {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    padding: 4%;
+    text-align: center;
+    z-index: -1;
+    color: #fff;
+    font-size: 18px;
+}
+
+.link-register {
+    color: rgba(119, 181, 60, 1);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.check-domen-button {
+    background-color: #5f6062;
+    border: 10px #5f6062 solid;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-left: 11px;
+    padding-right: 11px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.enter-domen-input {
+    background-color: transparent;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    padding-left: 20px;
+}
+
+.create-account-button {
+    border-radius: 5px;
+    background-color: rgb(119, 181, 60);
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-area: createAccountButton;
+    width: 300px;
+    min-width: 200px;
+    justify-self: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/*Второй экран*/
+.features-block {
+    box-sizing: border-box;
+    padding-top: 3.2%;
+    padding-bottom: 10.2%;
+}
+
+.features-block-wrap {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px, 80px));
+    grid-template-rows: auto;
+    grid-gap: 0 12px;
+    grid-template-areas:
+        "logoFeaturesBlock logoFeaturesBlock logoFeaturesBlock . . . . . . . . ."
+        "titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet"
+        "featuresCardItemThird featuresCardItemThird featuresCardItemThird featuresCardItemFourth featuresCardItemFourth featuresCardItemFourth featuresCardItemFifth featuresCardItemFifth featuresCardItemFifth featuresCardItemSixth featuresCardItemSixth featuresCardItemSixth"
+        "blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation blockExplanation"
+        "featuresCardItemSeventh featuresCardItemSeventh featuresCardItemSeventh featuresCardItemEighth featuresCardItemEighth featuresCardItemEighth featuresCardItemNinth featuresCardItemNinth featuresCardItemNinth featuresCardItemTenth featuresCardItemTenth featuresCardItemTenth"
+        ". . . . createAccountButton createAccountButton createAccountButton createAccountButton . . . .";
+    grid-template-rows: auto;
+}
+
+.features-card-item:nth-child(3) {
+    grid-area: featuresCardItemThird;
+    position: relative;
+}
+
+.arrow-block-explanation-top::after {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border: 24px transparent solid;
+    border-bottom: 24px #f7f7f7 solid;
+    width: 0;
+    height: 0;
+    z-index: 2;
+}
+
+.arrow-block-explanation-top::before {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border: 25px transparent solid;
+    border-bottom: 25px #afafb0 solid;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+
+.arrow-block-explanation-bottom::after {
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border: 24px transparent solid;
+    border-top: 24px #f7f7f7 solid;
+    width: 0;
+    height: 0;
+    z-index: 2;
+}
+
+.arrow-block-explanation-bottom::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border: 25px transparent solid;
+    border-top: 25px #afafb0 solid;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+
+.features-card-item:nth-child(5) {
+    grid-area: featuresCardItemFourth;
+    position: relative;
+}
+
+.features-card-item:nth-child(7) {
+    grid-area: featuresCardItemFifth;
+    position: relative;
+}
+
+.features-card-item:nth-child(9) {
+    grid-area: featuresCardItemSixth;
+    position: relative;
+}
+
+.features-card-item:nth-child(11) {
+    grid-area: featuresCardItemSeventh;
+    position: relative;
+}
+
+.features-card-item:nth-child(13) {
+    grid-area: featuresCardItemEighth;
+    position: relative;
+}
+
+.features-card-item:nth-child(15) {
+    grid-area: featuresCardItemNinth;
+    position: relative;
+}
+
+.features-card-item:nth-child(17) {
+    grid-area: featuresCardItemTenth;
+    position: relative;
+}
+
+.logo-features-block {
+    color: #333;
+    grid-area: logoFeaturesBlock;
+    margin-bottom: 22%;
+}
+
+.title-features-block {
+    font-size: 1.9rem;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    grid-area: titleFeaturesGet;
+    margin-bottom: 30px;
+}
+
+.features-card-item {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.features-card-item p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+}
+
+.block-explanation {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    border: 2px #afafb0 solid;
+    grid-area: blockExplanation;
+    padding: 3%;
+    z-index: 0;
+    display: none;
+}
+
+/*Последний экран*/
+.bottom-main {
+    background-image: url("image/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    height: 100%;
+    padding-top: 3.5%;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+}
+
+
+
+.wrap-bottom-main {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px, 80px));
+    grid-gap: 50px 12px;
+    grid-template-areas:
+        "logoBottomMain logoBottomMain logoBottomMain . . . . . . . . ."
+        ". questionChoose questionChoose questionChoose questionChoose questionChoose questionChoose questionChoose questionChoose questionChoose questionChoose ."
+        ". bottomMainText bottomMainText bottomMainText bottomMainText bottomMainText bottomMainText bottomMainText bottomMainText bottomMainText bottomMainText ."
+        ". . . createAccountButton createAccountButton createAccountButton createAccountButton createAccountButton createAccountButton . . ."
+        "bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock"
+        "aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark aboutTrademark";
+}
+
+.logo-bottom-main {
+    color: #fff;
+    grid-area: logoBottomMain;
+}
+
+.question-choose {
+    color: #fff;
+    grid-area: questionChoose;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.bottom-main-text {
+    grid-area: bottomMainText;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.bottom-main-red-block {
+    display: flex;
+    justify-content: space-between;
+    background-color: #df4a5e;
+    grid-area: bottomMainRedBlock;
+    padding: 27px 40px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.bottom-main-red-block-text {
+    width: 75%;
+    font-size: 1.38rem;
+}
+
+.bottom-main-red-block-number {
+    width: 20%;
+    min-width: 200px;
+    border-left: 1px rgba(255, 255, 255, 0.3) solid;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-left: 15px;
+}
+
+.about-trademark {
+    grid-area: aboutTrademark;
+    color: rgb(255, 255, 255);
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+@media (max-width: 965px) {
+    .wrap-header {
+        grid-gap: 60px 9px;
+    }
+
+    .features-block-wrap {
+        grid-gap: 0 9px;
+    }
+
+    .wrap-bottom-main {
+        grid-gap: 50px 9px;
+    }
+
+    .bottom-main-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 859px) {
+    html {
+        font-size: 2vw;
+    }
+
+    .container {
+        min-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrap-header {
+        grid-template-columns: repeat(4, minmax(30px, 204px));
+        grid-gap: 12% 0;
+        grid-template-areas:
+            "logoHeader tillDate tillDate ."
+            "majorTitle majorTitle majorTitle majorTitle"
+            "inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck"
+            "createAccountButton createAccountButton createAccountButton createAccountButton";
+    }
+
+    .major-title {
+        font-size: 4rem;
+        margin-top: 8%;
+    }
+
+    .fa-ruble-sign {
+        font-size: 4rem;
+    }
+
+    /*Второй экран*/
+    .features-block {
+        box-sizing: border-box;
+        padding-top: 3.2%;
+        padding-bottom: 10.2%;
+    }
+
+    .features-block-wrap {
+        grid-template-columns: repeat(4, minmax(30px, 204px));
+        grid-template-areas:
+            "logoFeaturesBlock logoFeaturesBlock logoFeaturesBlock ."
+            "titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet"
+            "featuresCardItemThird featuresCardItemFourth featuresCardItemFifth featuresCardItemSixth"
+            "featuresCardItemSeventh featuresCardItemEighth featuresCardItemNinth featuresCardItemTenth"
+            "createAccountButton createAccountButton createAccountButton createAccountButton";
+    }
+
+    .logo-features-block {
+        margin-bottom: 12%;
+    }
+
+    .title-features-block {
+        font-size: 1.9rem;
+        color: rgb(51, 51, 51);
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+        grid-area: titleFeaturesGet;
+        margin-bottom: 30px;
+    }
+
+    .features-card-item p {
+        font-size: 14px;
+    }
+
+    /*Последний экран*/
+    .bottom-main {
+        height: 100%;
+        padding-top: 3.5%;
+        padding-bottom: 5%;
+        box-sizing: border-box;
+    }
+
+    .wrap-bottom-main {
+        grid-template-columns: repeat(4, minmax(30px, 204px));
+        grid-template-areas:
+            "logoBottomMain logoBottomMain logoBottomMain logoBottomMain"
+            "questionChoose questionChoose questionChoose questionChoose"
+            "bottomMainText bottomMainText bottomMainText bottomMainText"
+            "createAccountButton createAccountButton createAccountButton createAccountButton"
+            "bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock bottomMainRedBlock"
+            "aboutTrademark aboutTrademark aboutTrademark aboutTrademark";
+    }
+
+    .bottom-main-red-block {
+        padding: 3%;
+    }
+
+    .bottom-main-red-block-text {
+        font-size: 1rem;
+    }
+
+    .bottom-main-red-block-number {
+        min-width: 160px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 590px) {
+    .input-domen-check {
+        padding: 10px;
+        margin-bottom: 2%;
+    }
+
+    .check-domen-button {
+        font-size: 17px;
+        letter-spacing: 0px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .enter-domen-input {
+        font-size: 17px;
+        padding-left: 10px;
+        width: 70%;
+    }
+
+    .wrap-header {
+        grid-template-areas:
+            "logoHeader tillDate tillDate tillDate"
+            "majorTitle majorTitle majorTitle majorTitle"
+            "inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck"
+            "createAccountButton createAccountButton createAccountButton createAccountButton";
+    }
+
+    .till-date {
+        letter-spacing: 0px;
+        text-align: right;
+    }
+
+    /*Второй экран*/
+    .features-block-wrap {
+        grid-template-columns: repeat(4, minmax(30px, 204px));
+        grid-template-areas:
+            "logoFeaturesBlock logoFeaturesBlock logoFeaturesBlock ."
+            "titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet"
+            "featuresCardItemThird featuresCardItemThird featuresCardItemFourth featuresCardItemFourth""featuresCardItemFifth featuresCardItemFifth featuresCardItemSixth featuresCardItemSixth"
+            "featuresCardItemSeventh featuresCardItemSeventh featuresCardItemEighth featuresCardItemEighth""featuresCardItemNinth featuresCardItemNinth featuresCardItemTenth featuresCardItemTenth"
+            "createAccountButton createAccountButton createAccountButton createAccountButton";
+    }
+
+    .bottom-main-red-block-text {
+        width: 75%;
+        font-size: 12px;
+    }
+
+    .bottom-main-red-block-number {
+        width: 20%;
+        min-width: 130px;
+        line-height: 2;
+        border-left: 1px rgba(255, 255, 255, 0.3) solid;
+    }
+
+    .about-trademark {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 475px) {
+    .input-domen-check {
+        padding: 10px;
+        margin-bottom: 2%;
+    }
+
+    .check-domen-button {
+        width: 43px;
+        height: 43px;
+        background-color: #5f6062;
+        color: #5f6062;
+        /* border: 10px #5f6062 solid; */
+        border: none;
+        border-radius: 3px;
+        font-size: 0px;
+        background-image: url("image/lens.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    /*Второй экран*/
+    .features-block-wrap {
+        grid-template-columns: repeat(4, minmax(30px, 204px));
+        grid-template-areas:
+            "logoFeaturesBlock logoFeaturesBlock logoFeaturesBlock logoFeaturesBlock"
+            "titleFeaturesGet titleFeaturesGet titleFeaturesGet titleFeaturesGet"
+            "featuresCardItemThird featuresCardItemThird  featuresCardItemThird  featuresCardItemThird" "featuresCardItemFourth featuresCardItemFourth featuresCardItemFourth featuresCardItemFourth" "featuresCardItemFifth featuresCardItemFifth featuresCardItemFifth featuresCardItemFifth" "featuresCardItemSixth featuresCardItemSixth featuresCardItemSixth featuresCardItemSixth"
+            "featuresCardItemSeventh featuresCardItemSeventh featuresCardItemSeventh featuresCardItemSeventh" "featuresCardItemEighth featuresCardItemEighth featuresCardItemEighth featuresCardItemEighth" "featuresCardItemNinth featuresCardItemNinth featuresCardItemNinth featuresCardItemNinth" "featuresCardItemTenth featuresCardItemTenth featuresCardItemTenth featuresCardItemTenth"
+            "createAccountButton createAccountButton createAccountButton createAccountButton";
+    }
+
+    .wrap-header {
+        grid-gap: 60px 0px;
+    }
+
+    .features-block-wrap {
+        grid-gap: 0 0px;
+    }
+
+    .wrap-bottom-main {
+        grid-gap: 40px 0px;
+    }
+
+    .bottom-main-red-block-text {
+        width: 75%;
+        font-size: 12px;
+    }
+
+    .bottom-main-red-block-number {
+        width: 20%;
+        min-width: 110px;
+        padding-left: 5px;
+        line-height: 3;
+        border-left: 1px rgba(255, 255, 255, 0.3) solid;
+    }
+}
+
+@media (max-width: 360px) {
+    .create-account-button {
+        width: 200px;
+        font-size: 15px;
+    }
+
+    .wrap-header {
+        grid-template-columns: repeat(4, minmax(30px, 204px));
+        grid-gap: 30px 0px;
+        grid-template-areas:
+            "logoHeader logoHeader logoHeader logoHeader"
+            "tillDate tillDate tillDate tillDate"
+            "majorTitle majorTitle majorTitle majorTitle"
+            "inputDomenCheck inputDomenCheck inputDomenCheck inputDomenCheck"
+            "createAccountButton createAccountButton createAccountButton createAccountButton";
+    }
+
+    .input-domen-check {
+        margin-bottom: 15%;
+    }
+
+    .bottom-main-red-block-number {
+        min-width: 90px;
+        line-height: 4;
+    }
+}
+.show {
+    display: block;
+}
